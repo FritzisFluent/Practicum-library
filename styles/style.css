@@ -1,4 +1,19 @@
-/* Add your class here */
+/* Add your class here. Done2*/
+.page {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  display: block;
+  min-width: 1100px;
+  max-width: 1600px;
+  font-size: 16px;
+  line-height: 20px;
+  margin: 0 auto;
+}
+
+/* While it makes sense to specify the font family for the entire page (since we’re only
+using one), we will use different font sizes and line heights for different text
+elements. However, it’s still more efficient to specify some general settings for the
+parent class and then override the parent style. For this to work, make sure these
+classes are placed after the parent class in the CSS file.*/
 
 .header {
   height: 100vh;
@@ -13,15 +28,23 @@
 
 .nav {
   /* Add flex properties here */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .logo {
+  width: 196px;
+  height: 60px;
 }
 
 .nav__links {
   list-style: none;
   padding-left: 0;
   margin-top: 8px;
+  display: flex;
+  align-items: center;
+  column-gap: 20px;
 }
 
 .nav__link {
@@ -32,21 +55,31 @@
 
 /* Add the hover state styles for .nav__link here */
 
+.nav__link:hover {
+  background-color:#1f69c9;
+}
+
 .header__title {
   font-size: 66px;
   line-height: 76px;
   font-weight: 500;
   margin: 150px 0 0;
+  max-width: 544px;
 }
 
 .header__description {
   font-size: 20px;
   line-height: 30px;
   margin: 32px 0 0;
+  max-width: 465px;
 }
 
 .header__image {
+  max-width: 636px;
   /* Write styles here */
+  position: absolute;
+  right: 20px;
+  bottom: 100px;
   z-index: 1;
 }
 
@@ -102,6 +135,9 @@
   border-radius: 6px;
   padding: 32px 40px 20px 32px;
   box-sizing: border-box;
+  width: 360px;
+  height: 420px;
+  align-items: center;
 }
 
 .card__content {
@@ -179,10 +215,14 @@
 
 .event-info__icon_type_calendar {
   background-image: url(../images/icon_calendar.svg);
+  width: 24px;
+  height: 24px;
 }
 
 .event-info__icon_type_pin {
   background-image: url(../images/icon_pin.svg);
+  width: 24px;
+  height: 24px;
 }
 
 .event-info__text {
@@ -205,65 +245,75 @@
 /* Add the hover state styles for .events__more here */
 
 .events__cover {
-  /* flex-grow: 1;
+  flex-grow: 1;
   flex-shrink: 0;
   flex-basis: 780px;
   max-width: 780px;
-  position: relative; */
+  position: relative;
 }
 
 .events__image {
-  /* max-width: 100%; */
+  max-width: 100%;
 }
 
 .person {
-  /* position: absolute;
+  position: absolute;
   display: flex;
   align-items: center;
   flex-direction: column;
-  gap: 10px; */
+  gap: 10px;
 }
 
 .person_name_feynman {
-  /* Use correct values of top/right/bottom/left properties to position the element */
+  top: -30px;
+  left: 319px;
+  /*Use correct values of top/right/bottom/left properties to position the element */
 }
 
 .person_name_burbidge {
+  top: 96px;
+  right: 125px;
   /* Use correct values of top/right/bottom/left properties to position the element */
 }
 
 .person_name_cannon {
+  bottom: 18px;
+  right: 216px;
   /* Use correct values of top/right/bottom/left properties to position the element */
 }
 
 .person_name_mitchell {
+  bottom: 82px;
+  left: 142px;
   /* Use correct values of top/right/bottom/left properties to position the element */
 }
 
 .person_name_tarter {
+  top: 79px;
+  left: 159px;
   /* Use correct values of top/right/bottom/left properties to position the element */
 }
 
 .person__image {
-  /* max-width: 100%; */
+  max-width: 100%;
 }
 
 .person__image_size_l {
-  /* width: 140px; */
+  width: 140px;
 }
 
 .person__image_size_m {
-  /* width: 100px; */
+  width: 100px;
 }
 
 .person__image_size_s {
-  /* width: 80px; */
+  width: 80px;
 }
 
 .person__caption {
-  /* text-align: center;
+  text-align: center;
   font-size: 14px;
-  margin: 0; */
+  margin: 0;
 }
 
 .membership {
@@ -324,6 +374,7 @@
   line-height: 30px;
   font-weight: 500;
   z-index: 1;
+  max-width: 154px;
 }
 
 .about__content {
@@ -346,9 +397,8 @@
 
 .footer {
   box-sizing: border-box;
-}
 
-.footer__columns {
+.footer__column {
 }
 
 .footer__column_content_hours {
