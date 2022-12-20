@@ -1,4 +1,4 @@
-/* Add your class here. Done2*/
+/* Add your class here. Done*/
 .page {
   font-family: "Helvetica Neue", Arial, sans-serif;
   display: block;
@@ -8,12 +8,6 @@
   line-height: 20px;
   margin: 0 auto;
 }
-
-/* While it makes sense to specify the font family for the entire page (since we’re only
-using one), we will use different font sizes and line heights for different text
-elements. However, it’s still more efficient to specify some general settings for the
-parent class and then override the parent style. For this to work, make sure these
-classes are placed after the parent class in the CSS file.*/
 
 .header {
   height: 100vh;
@@ -27,7 +21,6 @@ classes are placed after the parent class in the CSS file.*/
 }
 
 .nav {
-  /* Add flex properties here */
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -53,10 +46,10 @@ classes are placed after the parent class in the CSS file.*/
   font-weight: bold;
 }
 
-/* Add the hover state styles for .nav__link here */
+/* Adde the hover state styles for .nav__link here */
 
 .nav__link:hover {
-  background-color:#1f69c9;
+  color: #1f69c9;
 }
 
 .header__title {
@@ -76,10 +69,9 @@ classes are placed after the parent class in the CSS file.*/
 
 .header__image {
   max-width: 636px;
-  /* Write styles here */
   position: absolute;
   right: 20px;
-  bottom: 100px;
+  bottom: 135px;
   z-index: 1;
 }
 
@@ -99,8 +91,11 @@ classes are placed after the parent class in the CSS file.*/
   color: #2f80ed;
   text-decoration: none;
 }
+/* Added the hover state styles for .header__link here */
 
-/* Add the hover state styles for .header__link here */
+.header__link:hover {
+  color: #1f69c9;
+}
 
 .header__address {
   margin: 0;
@@ -128,7 +123,22 @@ classes are placed after the parent class in the CSS file.*/
   margin: 24px 0 0;
 }
 
-/* Add the CSS rule for your new class here. Make sure to place it before .card: parents should precede their children */
+/* Add the CSS rule for your new class here.*/
+
+.staff__card-list {
+  margin: 0 auto;
+  position: relative;
+}
+
+.card-list {
+  max-width: 760px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: center;
+  top: 68px;
+  list-style: none;
+}
 
 .card {
   background-color: #fff;
@@ -160,13 +170,15 @@ classes are placed after the parent class in the CSS file.*/
   line-height: 24px;
 }
 
+/* Notes to sefl!
+
+  Auto margins applied on a flex item automatically extend specified margin to occupy the extra space in the flex container. This pushes the element down to the bottom */
+
 .card__footer {
   margin: 0;
   font-size: 14px;
   line-height: 20px;
   color: #838383;
-  /* Auto margins applied on a flex item automatically extend specified margin to occupy the extra space in the flex container */
-  /* In our case, this pushes the element down to the bottom */
   margin-top: auto;
 }
 
@@ -242,7 +254,9 @@ classes are placed after the parent class in the CSS file.*/
   text-decoration: none;
 }
 
-/* Add the hover state styles for .events__more here */
+.events__more:hover {
+  color: #1f69c9;
+}
 
 .events__cover {
   flex-grow: 1;
@@ -267,7 +281,6 @@ classes are placed after the parent class in the CSS file.*/
 .person_name_feynman {
   top: -30px;
   left: 319px;
-  /*Use correct values of top/right/bottom/left properties to position the element */
 }
 
 .person_name_burbidge {
@@ -279,19 +292,16 @@ classes are placed after the parent class in the CSS file.*/
 .person_name_cannon {
   bottom: 18px;
   right: 216px;
-  /* Use correct values of top/right/bottom/left properties to position the element */
 }
 
 .person_name_mitchell {
   bottom: 82px;
   left: 142px;
-  /* Use correct values of top/right/bottom/left properties to position the element */
 }
 
 .person_name_tarter {
   top: 79px;
   left: 159px;
-  /* Use correct values of top/right/bottom/left properties to position the element */
 }
 
 .person__image {
@@ -335,11 +345,13 @@ classes are placed after the parent class in the CSS file.*/
   list-style-type: none;
   padding: 0;
   margin: 100px 0 0;
-  /* Add styles */
+  display: flex;
+  justify-content: center;
 }
 
 .step {
-  /* Add styles */
+  flex-basis: 220px;
+  gap: 40px;
 }
 
 .step__title {
@@ -366,6 +378,8 @@ classes are placed after the parent class in the CSS file.*/
   overflow: hidden;
   position: relative;
   box-sizing: border-box;
+  display: flex;
+  justify-content: center;
 }
 
 .about__title {
@@ -375,6 +389,9 @@ classes are placed after the parent class in the CSS file.*/
   font-weight: 500;
   z-index: 1;
   max-width: 154px;
+  position: absolute;
+  left: 120px;
+  z-index: 1;
 }
 
 .about__content {
@@ -382,10 +399,11 @@ classes are placed after the parent class in the CSS file.*/
   line-height: 30px;
   font-weight: 400;
   max-width: 660px;
+  z-index: 2;
 }
 
 .about__paragraph {
-  margin: 0;
+  text-align: left;
 }
 
 .about__circle {
@@ -393,34 +411,55 @@ classes are placed after the parent class in the CSS file.*/
   width: 495px;
   height: 495px;
   border-radius: 50%;
+  position: absolute;
+  top: -121px;
+  left: -91px;
+  z-index: 0;
 }
 
 .footer {
   box-sizing: border-box;
+  background-color: #1f1f1f;
+  color: #fff;
+  padding: 57px 102px 60px 80px;
+}
 
-.footer__column {
+.footer__columns {
+  display: flex;
+  flex-wrap: nowrap;
 }
 
 .footer__column_content_hours {
+  margin-left: auto;
 }
 
 .footer__column_content_social {
+  margin-left: 100px;
 }
 
 .footer__logo {
+  width: 153px;
 }
 
+/* The code below removes the default browser styles for lists */
 .footer__list {
-  /* The code below removes the default browser styles for lists */
   list-style-type: none;
   padding: 0;
   margin: 0;
 }
 
+/* The code below removes the default browser styles for lists */
+
 .footer__list-item {
+  margin-bottom: 16px;
+}
+
+.footer__list-item:last-of-type {
+  margin-bottom: 0;
 }
 
 .footer__column-heading {
+  margin: 0 0 20px;
 }
 
 .footer__column-link {
@@ -428,10 +467,20 @@ classes are placed after the parent class in the CSS file.*/
   font-size: 16px;
   line-height: 20px;
   text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+.footer__column-link:hover {
+  color: #c1c1c1;
 }
 
 .footer__social-icon {
+  width: 16px;
+  height: 16px;
+  margin-right: 10px;
 }
 
 .footer__copyright {
+  margin-top: 100px;
 }
