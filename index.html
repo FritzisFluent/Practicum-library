@@ -10,7 +10,6 @@
 
   <body>
     <div class="page">
-      <!-- Thia div wraps the entire page content -->
       <header class="header">
         <nav class="nav">
           <img
@@ -18,8 +17,6 @@
             alt="Practicum Library Logo"
             class="logo"
           />
-
-          <!-- Putting navigation links in a list is supposed to be the best practice of writing the semantic code since it allows screen readers to pause between each link instead of reading all the links as a sentence. -->
           <ul class="nav__links">
             <li>
               <a href="#staff" class="nav__link">Staff picks</a>
@@ -34,7 +31,7 @@
               <a href="#about" class="nav__link">About</a>
             </li>
             <li>
-              <a href="contacts" class="nav__link">Contacts</a>
+              <a href="#contacts" class="nav__link">Contacts</a>
             </li>
           </ul>
         </nav>
@@ -62,7 +59,7 @@
         <section id="staff" class="staff">
           <h2 class="staff__title">Staff picks</h2>
           <p class="staff__subtitle">That our readers love</p>
-          <!-- The ul tag (unordered list) is used here as it is a collection of cards for which the order doesn't really matter. -->
+
           <ul class="card-list staff__card-list">
             <li class="card">
               <div class="card__content">
@@ -165,7 +162,7 @@
             </p>
             <a href="#" class="events__more">More events &rarr;</a>
           </div>
-          <!-- Start creating the composition here -->
+
           <div class="events__cover">
             <img
               class="events__image"
@@ -346,8 +343,6 @@
           </div>
         </div>
         <p class="footer__copyright">&copy; 2022 Fritz Gerald Alexandre</p>
-
-        <!-- My first solo markup at Practicum 💪 -->
       </footer>
     </div>
   </body>
