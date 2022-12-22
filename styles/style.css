@@ -370,7 +370,6 @@
   position: relative;
   box-sizing: border-box;
   display: flex;
-  justify-content: left;
 }
 
 .about__title {
@@ -476,4 +475,5 @@
 
 .footer__copyright {
   margin-top: 100px;
+  margin-bottom: 0;
 }
