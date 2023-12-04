@@ -1,0 +1,25 @@
+.staff {
+  padding-top: 100px;
+  padding-bottom: 140px;
+  background-color: #f2f2f2;
+}
+
+.staff__title {
+  text-align: center;
+  font-size: 44px;
+  line-height: 52px;
+  margin: 0 0 24px;
+}
+
+.staff__subtitle {
+  text-align: center;
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: 400;
+  margin: 24px 0 0;
+}
+
+.staff__card-list {
+  margin: 0 auto;
+  position: relative;
+}
